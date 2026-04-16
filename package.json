@@ -1,11 +1,10 @@
 {
   "name": "test2-b9a9ee58",
   "version": "1.0.0",
-  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node nexus-telemetry.js node index.js",
+    "start": "node nexus-telemetry.mjs node index.js",
     "start:raw": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
