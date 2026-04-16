@@ -1,0 +1,17 @@
+{
+  "name": "test2-b9a9ee58",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nexus attach node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nexus:original-start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
