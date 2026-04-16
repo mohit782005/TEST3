@@ -16,13 +16,25 @@ app.get('/health', (req, res) => {
   res.json({ healthy: true, memory: process.memoryUsage() });
 });
 
-// This endpoint has a bug — accessing .profile on undefined user
+// This endpoint crashes the ENTIRE process (not just the request)
 app.get('/api/users/:id', (req, res) => {
   console.log(`[${new Date().toISOString()}] GET /api/users/${req.params.id}`);
+  console.log(`[${new Date().toISOString()}] Looking up user in cache...`);
+  
   const user = users[req.params.id];
-  // BUG: no null check — crashes if user doesn't exist
-  const profile = user.profile;
-  res.json(profile);
+
+  if (!user) {
+    console.error(`[FATAL] User ${req.params.id} not found in cache`);
+    console.error(`[FATAL] Null reference in user lookup pipeline`);
+    
+    // Simulate an unhandled async crash that kills the process
+    process.nextTick(() => {
+      throw new Error(`Cannot read properties of undefined (reading 'profile') - user ${req.params.id} does not exist`);
+    });
+    return;
+  }
+
+  res.json(user.profile);
 });
 
 // Heartbeat
