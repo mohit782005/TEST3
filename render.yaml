@@ -7,3 +7,5 @@ services:
     envVars:
       - key: NEXUS_BACKEND_URL
         value: https://b6d1-103-89-232-66.ngrok-free.app
+      - key: NEXUS_PROJECT
+        value: mohit/test2-b9a9ee58

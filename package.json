@@ -1,17 +1,19 @@
 {
   "name": "test2-b9a9ee58",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nexus attach node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "nexus:original-start": "node index.js"
+    "start": "node nexus-telemetry.js node index.js",
+    "start:raw": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
   }
 }
