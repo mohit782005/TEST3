@@ -1,12 +1,12 @@
 {
   "repoPath": "C:\\nexus-X\\test2-b9a9ee58",
-  "lastCommit": "",
-  "indexedAt": "2026-04-16T07:21:41.076Z",
+  "lastCommit": "b4120670350b0422e6c9dfa0ed1e9e2774473b08",
+  "indexedAt": "2026-04-16T09:28:53.607Z",
   "stats": {
-    "files": 4,
-    "nodes": 26,
-    "edges": 22,
-    "communities": 0,
+    "files": 7,
+    "nodes": 30,
+    "edges": 24,
+    "communities": 1,
     "processes": 0,
     "embeddings": 0
   }
