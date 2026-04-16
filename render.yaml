@@ -4,3 +4,6 @@ services:
     env: node
     buildCommand: npm install
     startCommand: npm start
+    envVars:
+      - key: NEXUS_BACKEND_URL
+        value: https://b6d1-103-89-232-66.ngrok-free.app
